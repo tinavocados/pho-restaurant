@@ -1,188 +1,266 @@
 <html>
+
 <head>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <link rel="stylesheet" href="vietRes.css">
-  <!--<script src="vietRes2.html"></script> -->
+    <link rel="stylesheet" href="vietRes.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
 
 </head>
+
 <body>
-  <!--
-    <h1 class="title">Pho Na</h1>
-    <a href="vietRes2.html">pay here</a>
-    
-    <div class="ingredients">
-      <div class="menu" id="dish0"></div>
-      <div class="menu" id="food0>"></div>
-        <h1 id="name0"></h1>
-        <h1 id="price0"></h1>
-        <h1 id="sides0"></h1>
-        <input type="integer" id="amount" placeholder="insert amount...">
-        <button onclick="purchase0()">purchase</button>
-    </div> -->
-    <h1 class="title">Pho Na</h1>
-    <button id="purchase">Order</button>
-     <a href="vietRes2.html"><button id="pay">Pay</button></a>
+    <br>
+    <h1 id="title">Pho Na</h1>
     <p id="address">1538 Vo Blvd #101, Honolulu, HI 96814</p>
-     <!-- make link color appealing -->
-    <!--<div id="pay"><a href="vietRes2.html">pay here</a></div> -->
+
+    <br>
     
-   
-   
-    <h1 id="overall"></h1>
-    <div id="l1">
-        <h2 id="pho"></h2>
-        <h2>pho</h2>
-        <div id="pic1">
-          <select id="user1" class="choose">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-       <!-- <input type="integer" id="amount" placeholder="insert amount...">
-        <button onclick="purchase0()">purchase</button> -->
-    </div>
+    <div class="allboxes">
 
-    <div id="r1">
-       <h2 id="grilledpork"></h2>
-         <h2>grilled pork</h2>
-        <div id="pic2">
-          <select id="user2" class="choose">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-             <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-    </div>
- 
-    <div id="l2">
-        <h2 id="crabsoup"></h2>
-        <h2>crab soup</h2>
-        <div id="pic3">
-          <select id="user3" class="choose">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-             <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-    </div>
-
-    <div id="r2">
-        <h2 id="springrolls"></h2>
-        <h2>spring rolls</h2>
-        <div id="pic4">
-          <select id="user4" class="choose">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-             <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-    </div>
+        <div class="box" id="food0">
+            <h1 id="name0"></h1>
+            <p id="sides0"></p>
+            <p id="price0"></p>
+            <input type="integer" id="quantity" placeholder="Enter quantity...">
+            <button onclick="buy0()">Buy</button>
+        </div>
     
-<div id="l3">
-        <h2 id="banhmi"></h2>
-        <h2>banh mi</h2>
-        <div id="pic5">
-          <select id="user5" class="choose">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-             <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-    </div>
-    
-<div id="r3">
-       <h2 id="banhxeo"></h2>
-       <h2>banh xeo</h2>
-        <div id="pic6">
-          <select id="user6" class="choose">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-             <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-    </div>
+
+        <div class="box" id="food1">
+            <h1 id="name1"></h1>
+            <p id="sides"></p>
+            <p id="price1"></p>
+            <input type="integer" id="quantity1" placeholder="Enter quantity...">
+            <button onclick="buy1()">Buy</button>
+        </div>
     </div>
 
-    <!--
-    <div id="displayAmount">
-      <h1 id="yourOrder">your purchase</h1>
-      <ul id="orderList"></ul>
-      <p id="totalDisplay"></p>
-      <p id="taxTotal"></p>
-      <button onlick="totalPurchase()">checkout</button>
-    </div> -->
-   <script src="vietRes.js">
+    <div class="row">
 
+        <div class="box" id="food2">
+            <h1 id="name2"></h1>
+            <p id="sides2"></p>
+            <p id="price2"></p>
+            <input type="integer" id="quantity2" placeholder="Enter quantity...">
+            <button onclick="buy2()">Buy</button>
+        </div>
    
-/* var foodName = [];
- var foodPrice = [];
- var total = [];
- 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                var mydata = JSON.parse(this.responseText);
-                console.log(mydata.food.length);
-                for (var i=0;i< mydata.food.length;i++) {
+       
+        <div class="box" id="food3">
+            <h1 id="name3"></h1>
+            <p id="sides3"></p>
+            <p id="price3"></p>
+            <input type="integer" id="quantity3" placeholder="Enter quantity...">
+            <button onclick="buy3()">Buy</button>
+        </div>
+    </div>
+
+    <div class="row">
+       
+        <div class="box" id="food4">
+            <h1 id="name4"></h1>
+            <p id="sides4"></p>
+            <p id="price4"></p>
+            <input type="integer" id="quantity4" placeholder="Enter quantity...">
+            <button onclick="buy4()">Buy</button>
+        </div>
+   
+      
+        <div class="box" id="food5">
+            <h1 id="name5"></h1>
+            <p id="toppings5"></p>
+            <p id="price5"></p>
+            <input type="integer" id="quantity5" placeholder="Enter quantity...">
+            <button onclick="buy5()">Buy</button>
+        </div>
+    </div>
+
+    <div id="showPurchase">
+        <h1 id="yourOrder">Your Order</h1>
+        <ul id="orderList"></ul>
+        <p id="totalDisplay"></p>
+        <p id="taxTotal"></p>
+        <button onclick="totalItems()">Checkout</button>
+    </div>
+
+
+    <script>
+        var foodName = [];
+        var foodPrices = [];
+        var total = [];
+        var food0name;
+        var food0price;
+        /*********Ramen 0**********/
+        var xmlhttp = new XMLHttpRequest(); //I want to begin a new file request from the server
+        xmlhttp.onreadystatechange = function () { //Do this function to check if it is ready
+            if (this.readyState == 4 && this.status == 200) { //If the server is ready(4) and the file is available(200)
+                var mydata = JSON.parse(this.responseText); //Save the JSOn file as mydata and convert it in a readable format.
+                for (var i = 0; i < mydata.food.length; i++) {
                     foodName.push(mydata.food[i].name);
-                    foodPrice.push(mydata.food[i].price);
+                    foodPrices.push(mydata.food[i].price);
                     console.log(foodName);
-                    console.log(foodPrice);
+                    console.log(foodPrices);
                 }
-                document.getElementById('name0').innerHTML = foodName[0];
-                document.getElementById('price0').innerHTML = foodPrice[0];
-                document.getElementById('sides0').innerHTML = mydata.food[0].sides;
+                document.getElementById('name0').innerHTML = mydata.food[0].name;
+               
+                food0price = mydata.food[0].price;
+                document.getElementById('price0').innerHTML = "$" + mydata.food[0].price + ".00";
+                document.getElementById('sides0').innerHTML = mydata.food[0].toppings;
+                document.getElementById('name1').innerHTML = mydata.food[1].name;
                 
+                food1price = mydata.food[1].price;
+                document.getElementById('price1').innerHTML = "$" + mydata.food[1].price + ".00";
+                document.getElementById('sides0').innerHTML = mydata.food[1].toppings;
+                document.getElementById('name2').innerHTML = mydata.food[2].name;
+               
+                food2price = mydata.food[2].price;
+                document.getElementById('price2').innerHTML = "$" + mydata.food[2].price;
+                document.getElementById('sides1').innerHTML = mydata.food[2].toppings;
+                document.getElementById('name3').innerHTML = mydata.food[3].name;
+               
+                document.getElementById('price3').innerHTML = "$" + mydata.food[3].price;
+                document.getElementById('sides2').innerHTML = mydata.food[3].toppings;
+                document.getElementById('name4').innerHTML = mydata.food[4].name;
+                
+                food4price = mydata.food[4].price;
+                document.getElementById('price4').innerHTML = "$" + mydata.food[4].price;
+                document.getElementById('sides3').innerHTML = mydata.food[4].toppings;
+                document.getElementById('name5').innerHTML = mydata.food[5].name;
+               
+                food5price = mydata.food[5].price;
+                document.getElementById('price5').innerHTML = "$" + mydata.food[5].price;
+                document.getElementById('sides4').innerHTML = mydata.food[5].toppings;
             }
         };
-        xmlhttp.open("GET", "vietRes.json", true);
-        xmlhttp.send();
-        
-        function purch0() {
-          var amount = document.getElementById('amount').value;
-          var subtotal = amount * foodPrices[0];
-          total.push(subtotal * 1.04712.toFixed(2));
-          document.getElementbyId(amount).value = "";
-          var node = document.createElement('li');
-          var textNode = document.createTextNode (amount + " x " + foodName[]);
-          node.appendChild(textNode);
-          document.getElementById('orderList').appendChild(node);
-          //local variable to reduce total arr
-          var sum = total.reduce(add, 0);
-          function add(a, b) {
-            return a + b;
-          }
-          document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+        xmlhttp.open("GET", "vietRes.json", true); //I will GET a file called menu.json
+        xmlhttp.send(); //Send to the browser
+        /*********Ramen 0**********/
+        function buy0() {
+            //Get the value of the quantity field//
+            var qty = document.getElementById('quantity').value;
+            var subtotal = qty * foodPrices[0];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " x " + foodName[0]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            //I am creating a LOCAL variable called sum and reducing the total array.//
+            var sum = total.reduce(add, 0);
+            //This function within a function will return the value from low to high and add them together.//
+            function add(a, b) {
+                return a + b;
+            }
+            //I output the SUM of everything in the total array and fix the decimal places to 2//
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+        }
+        /*********Ramen 1**********/
+        function buy1() {
+            var qty = document.getElementById('quantity1').value;
+            var subtotal = qty * foodPrices[1];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity1').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " x " + foodName[1]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var sum = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+        }
+        /*********Ramen 2**********/
+        function buy2() {
+            var qty = document.getElementById('quantity2').value;
+            var subtotal = qty * foodPrices[2];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity2').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " x " + foodName[2]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var sum = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+        }
+        /*********Ramen 3**********/
+        function buy3() {
+            var qty = document.getElementById('quantity3').value;
+            var subtotal = qty * foodPrices[3];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity3').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " x " + foodName[3]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var sum = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+        }
+        /*********Ramen 4**********/
+        function buy4() {
+            var qty = document.getElementById('quantity4').value;
+            var subtotal = qty * foodPrices[4];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity4').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " x " + foodName[4]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var sum = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+        }
+        /*********Ramen 5**********/
+        function buy5() {
+            var qty = document.getElementById('quantity5').value;
+            var subtotal = qty * foodPrices[5];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity5').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " x " + foodName[5]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var sum = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
         }
    
-   function totalItems() {
-     var a= document.getElementById('user').value;
-     localStorage.setItem('key1',a);
-     location.href= "vietRes2.html";
-     var previous= null;
-     var current= null;
-     setInternal(function() {
-       $.getJSON('vietRes.json',function(json) {
-         current=JSON.stringify(json);
-         if (previous && current && previous!==current) {
-           location.reload();
-         }
-         previous==current;
-       });
-     },2000);
-   }
-   
-   
-</script>
-</h2>
-</div>
+        var order= [];
+        function totalItems() {
+            var sum = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+                }
+            var pleaseWork= order.push("orderList");
+            localStorage.setItem('key1', sum.toFixed(2));
+            localStorage.setItem('crab1', pleaseWork);
+            location.href = "vietRes2.html";
+        }
+        
+        
+        var previous= null;
+        var current= null;
+        setInterval(function() {
+        $.getJSON("vietRes.json",function(json){
+            current=JSON.stringify(json);
+            if (previous && current&& previous!==current) {
+      
+            location.reload();
+        }
+        previous==current;
+            });
+        }, 2000);
+    </script>
+
 </body>
 
 </html>

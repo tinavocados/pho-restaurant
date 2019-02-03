@@ -1,239 +1,130 @@
-.title,
-.bottom {
+.box {
+    float: left;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
   
-    text-align: center;
-}
-
-div {
-    width: 40vw;
-    height: 30vh;
-}
-
-body {
+  body {
   background-image: url("chalk.jpg");
   color: white;
-   font-family: "Courier New", Courier, monospace;
+   font-family: "Courier New", Courier;
 }
 
 h2 {
   color: white;
 }
 
-#l1,
-#l2,
-#l3 {
-  float: left;
-  background-color: white;
-}
 
-#r1,
-#r2,
-#r3 {
-  float: right;
-  background-color: white;
-}
-
-#l1 {
-  background-image: url('https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/roast-turkey-pho-ck.jpg?itok=Vf6k6W0d');
-}
-
-#r1 {
-  background-image: url('https://asiatourist.org/wp-content/uploads/2016/11/bun-thit-nuong.png');
-}
-
-#l2 {
-  background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/0e/6b/e1/59/bun-rieu.jpg');
-}
-
-#r2 {
-  background-image: url('https://www.happyfoodstube.com/wp-content/uploads/2018/03/vegetarian-fresh-spring-rolls-image.jpg');
-}
-
-#l3 {
-  background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/11/ac/45/b1/vietnamese-banh-mi-roll.jpg');
-}
-
-#r3 {
-  background-image: url('https://i.pinimg.com/originals/b7/89/97/b78997714fa00340da936448579e6ad0.jpg');
-}
-
-button {
-  border: none;
-  padding: 7px;
-  border-radius: 4px;
-}
-
-button:hover {
-  border: none;
-  padding: 7px;
-  border-radius: 4px;
-  background-color: #cecece;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/*
-#l1 {
-  background-image: url("pho.jpg");
-  border-radius: 15px;
-  float:left;
-  margin-right: 17px;
-  padding: 20px 10px;
-  font-family: "Courier New", Courier, monospace;
-}
-#l2 {
-  background-image: url("bunrieu.jpg");
-  border-radius: 15px;
-  float: left;
-  margin-bottom: -17px;
-  padding: 20px 10px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-#r1 {
-  background-image: url("thitnuong.jpg");
-  border-radius: 15px;
-  float: right;
-  margin-right: 17px;
-  padding: 20px 10px;
-  font-family: "Courier New", Courier, monospace;
-}
-#r2 {
-  background-image: url("springrolls.jpg");
-  border-radius: 15px;
-  float: right;
-  margin-right: 17px;
-  padding: 20px 10px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-#l3 {
-  background-image: url("banhmi.jpeg");
-  border-radius: 15px;
-  float: left;
-  margin-bottom: -17px;
-  padding: 20px 10px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-#r3 {
-  background-image: url("banhxeo.png");
-  border-radius: 15px;
-  float: right;
-  margin-right: 17px;
-  padding: 20px 10px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-*/
-#p1,
-#p2,
-#p3 {
-    
-    margin: 0;
-    font-size: 10vh;
-   
-
-}
- /*
-input {
-    width: 25vw;
-    height: 15vh;
-    text-align: center;
-    font-size: 10vh;
-    margin: 5vh;
-
-
-}
-*/
- #heading {
-   color: white;
-   font-family: "Courier New", Courier, monospace;
- }
-
-#pay {
-  height: 30px;
-  width: 5%;
-  float: right;
-  border-width: 0;
-  border-radius: 5px;
-  font-size: 2vh;
-  position: absolute;
-  right: 100px;
-  background-color: white;
-  opacity:0.6;
-}
-
-/*
-
-#user1 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user2 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user3 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user4 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user5 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-#user1 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user2 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user3 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user4 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-
-#user6 {
-  opacity: 0.5;
-  border-radius: 5px;
-}
-*/
 #title {
-   font-family: "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier;
+  color: white;
+  text-align: center;
+  line-height: 0px;
 }
 
 #address {
-   font-family: "Courier New", Courier, monospace;
-   font-size: 20px;
-   text-align: center;
-}
-
-a:link {
-  text-decoration: none;
-  font-size: 16px;
-}
-
-a:hover {
+  font-family: "Courier New", Courier;
+  font-size: 20px;
   color: white;
-  font-size: 16px;
+  text-align: center;
 }
 
-.placeholder {
-   font-size: 16px;
+
+#food0 {
+  font-family: "Courier New", Courier, monospace;
+  color: #020311;
+  background-image: url("https://fromthelarder.co.uk/wp-content/uploads/2017/11/smallsqBanh-Xeo-3.jpg");
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  
+  float: left;
+}
+
+
+
+#food1 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  color: #020311;
+   background-image: url("https://asiatourist.org/wp-content/uploads/2016/11/bun-thit-nuong.png");
+  float: left;
+}
+
+
+
+#food2 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  color: #020311;
+   background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/6b/e1/59/bun-rieu.jpg");
+  float: left;
+}
+
+
+
+#food3 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  color: #020311;
+ background-image: url("https://www.happyfoodstube.com/wp-content/uploads/2018/03/vegetarian-fresh-spring-rolls-image.jpg");
+  background-size: cover;
+  float: left;
+}
+
+
+
+#food4 {
+  font-family: "Courier New", Courier, monospace;
+  background-size: auto 300px;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  margin-right: 30px;
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/11/ac/45/b1/vietnamese-banh-mi-roll.jpg");
+  float: left;
+}
+
+#pho5 {
+  background-image: url("https://i.pinimg.com/originals/b7/89/97/b78997714fa00340da936448579e6ad0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
+
+#food5 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  margin-right: 30px;
+  background-image: url("https://i.pinimg.com/originals/b7/89/97/b78997714fa00340da936448579e6ad0.jpg");
+  float: left;
+}
+
+#showPurchase {
+  width: 1350px;
+  height: auto;
+  color: #020311;
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/04/black-wood-texture-15204.jpg");
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  border-radius: 12px;
+  float: left;
+}
+
+#taxTotal,
+#totalDisplay,
+#orderList,
+#yourOrder {
+  color: #cfd2d6;
 }
