@@ -28,7 +28,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             localStorage.setItem("item1", itemList); //set order summary to next page
 
         }
-        order.onclick = function () {
+        purchase.onclick = function () {
             if (document.getElementById('user1').value >= 1) {
                 enter();
 
@@ -65,7 +65,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             var totalL5 = Number(localStorage.getItem("total5")); //get from box5
             var totalL6 = Number(localStorage.getItem("total6")); //get from box6
             var total = totalP + totalL + totalL3 + totalL4 + totalL5 + totalL6;
-            document.getElementById('bottom').innerHTML = "Your total is $" + total.toFixed(2);
+            document.getElementById('overall').innerHTML = "Your total is $" + total.toFixed(2);
             window.alert(foodName[1] + " x " + qty);
             var itemList = (foodName[1] + " x " + qty + " = $" + foodPrice[1] * qty);
             localStorage.setItem("item2", itemList); //set order summary to next page
@@ -83,7 +83,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             var totalL5 = Number(localStorage.getItem("total5")); //get from box5
             var totalL6 = Number(localStorage.getItem("total6")); //get from box6
             var total = totalL + totalP + totalL2 + totalL4 + totalL5 + totalL6;
-            document.getElementById('bottom').innerHTML = "Your total is $" + total.toFixed(2);
+            document.getElementById('overall').innerHTML = "Your total is $" + total.toFixed(2);
             window.alert(foodName[2] + " x " + qty);
             var itemList = (foodName[2] + " x " + qty + " = $" + foodPrice[2] * qty);
             localStorage.setItem("item3", itemList); //set order summary to next page
@@ -101,7 +101,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             var totalL5 = Number(localStorage.getItem("total5")); //get from box5
             var totalL6 = Number(localStorage.getItem("total6")); //get from box6
             var total = totalL + totalP + totalL2 + totalL3 + totalL5 + totalL6;
-            document.getElementById('bottom').innerHTML = "Your total is $" + total.toFixed(2);
+            document.getElementById('overall').innerHTML = "Your total is $" + total.toFixed(2);
             window.alert(foodName[3] + " x " + qty);
             var itemList = (foodName[3] + " x " + qty + " = $" + foodPrice[3] * qty);
             localStorage.setItem("item4", itemList); //set order summary to next page
@@ -120,7 +120,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             var totalL4 = Number(localStorage.getItem("total4")); //get from box4
             var totalL6 = Number(localStorage.getItem("total6")); //get from box6
             var total = totalL + totalP + totalL2 + totalL3 + totalL4 + totalL6;
-            document.getElementById('bottom').innerHTML = "Your total is $" + total.toFixed(2);
+            document.getElementById('overall').innerHTML = "Your total is $" + total.toFixed(2);
             window.alert(foodName[4] + " x " + qty);
             var itemList = (foodName[4] + " x " + qty + " = $" + foodPrice[4] * qty);
             localStorage.setItem("item5", itemList); //set order summary to next page
@@ -139,7 +139,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             var totalL4 = Number(localStorage.getItem("total4")); //get from box4
             var totalL5 = Number(localStorage.getItem("total4")); //get from box5
             var total = totalL + totalP + totalL2 + totalL3 + totalL4 + totalL5;
-            document.getElementById('bottom').innerHTML = "Your total is $" + total.toFixed(2);
+            document.getElementById('overall').innerHTML = "Your total is $" + total.toFixed(2);
             window.alert(foodName[5] + " x " + qty);
             var itemList = (foodName[5] + " x " + qty + " = $" + foodPrice[5] * qty);
             localStorage.setItem("item6", itemList); //set order summary to next page
@@ -147,12 +147,12 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         }
 
         //show name and price of items
-        document.getElementById('mapo').innerHTML = foodName[0] + " - $" + foodPrice[0];
-        document.getElementById('wonton').innerHTML = foodName[1] + " - $" + foodPrice[1];
+        document.getElementById('pho').innerHTML = foodName[0] + " - $" + foodPrice[0];
+        document.getElementById('grilledpork').innerHTML = foodName[1] + " - $" + foodPrice[1];
         document.getElementById('friedrice').innerHTML = foodName[2] + " - $" + foodPrice[2];
-        document.getElementById('hainam').innerHTML = foodName[3] + " - $" + foodPrice[3];
-        document.getElementById('fishball').innerHTML = foodName[4] + " - $" + foodPrice[4];
-        document.getElementById('pho').innerHTML = foodName[5] + " - $" + foodPrice[5];
+        document.getElementById('crabsoup').innerHTML = foodName[3] + " - $" + foodPrice[3];
+        document.getElementById('springrolls').innerHTML = foodName[4] + " - $" + foodPrice[4];
+        document.getElementById('banhmi').innerHTML = foodName[5] + " - $" + foodPrice[5];
 
 
 xmlhttp.open("GET", "vietRes.json", true);
@@ -227,7 +227,7 @@ function checkout() { //jump to next page
 var previous = null;
 var current = null;
 setInterval(function () { //auto refresh
-    $.getJSON("jsonRest.json", function (json) {
+    $.getJSON("vietRes.json", function (json) {
         current = JSON.stringify(json);
         if (previous && current && previous !== current) {
             location.reload();
