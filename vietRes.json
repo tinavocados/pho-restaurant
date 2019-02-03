@@ -1,0 +1,58 @@
+{
+    "food":[
+      {
+        "name":"pho",
+        "price":12,
+        "sides":[
+          "lime",
+          "bean sprouts",
+          "sriracha sauce",
+          "hoisin sauce"
+          ]
+      },
+          {
+        "name":"grilledpork",
+        "price":13,
+        "sides":[
+         "lettuce",
+         "fish sauce",
+         "tomato",
+         "green onions"
+          ]
+      },
+      {
+        "name":"crabsoup",
+        "price":13,
+        "sides":[
+         "lettuce",
+         "bean sprouts",
+         "fish sauce",
+         "green onions"
+          ]
+      },
+       {
+        "name":"springrolls",
+        "price":10,
+        "sides":[
+         "peanut sauce",
+         "lettuce",
+         "fish sauce"
+          ]
+      },
+        {
+        "name":"banhmi",
+        "price":10,
+        "sides":[
+         "lettuce"
+          ]
+      },
+       {
+        "name":"banhxeo",
+        "price":10,
+        "sides":[
+         "lettuce"
+          ]
+      }
+      ]
+    
+  }

@@ -1,0 +1,36 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="vietRes.css">
+
+    <script>
+        var foodName = [];
+        var foodPrice = [];
+        
+        var xmlhttp = new XMLHttpRequest(); //display json
+        xmlhttp.onreadystatechange = function() { //i will do this when somthing is matched
+            if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
+                var mydata = JSON.parse(this.responseText); //json will be saved as mydata
+                console.log(mydata.food.length);
+                for(var i=0; i < mydata.food.length; i++) {
+                    foodName.push(mydata.food[i].name);
+                    foodPrice.push(mydata.food[i].price);
+                    console.log(foodName);
+                    console.log(foodPrice);
+                }
+        
+        };
+        xmlhttp.open("GET", "food.json", true);
+        xmlhttp.send();
+        }
+           
+           
+           
+           
+        </script>
+</head>
+<body>
+
+</body>
+
+</html>
