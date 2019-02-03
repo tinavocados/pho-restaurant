@@ -1,0 +1,186 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="vietRes.css">
+  <script src="vietRes2.html"></script>
+
+</head>
+<body>
+  <!--
+    <h1 class="title">Pho Na</h1>
+    <a href="vietRes2.html">pay here</a>
+    
+    <div class="ingredients">
+      <div class="menu" id="dish0"></div>
+      <div class="menu" id="food0>"></div>
+        <h1 id="name0"></h1>
+        <h1 id="price0"></h1>
+        <h1 id="sides0"></h1>
+        <input type="integer" id="amount" placeholder="insert amount...">
+        <button onclick="purchase0()">purchase</button>
+    </div> -->
+    <h1 class="title">Pho Na</h1>
+    <button id="order">Order</button>
+     <a href="vietRes2.html"><button id="pay">Pay</button></a>
+    <p id="address">1538 Vo Blvd #101, Honolulu, HI 96814</p>
+     <!-- make link color appealing -->
+    <!--<div id="pay"><a href="vietRes2.html">pay here</a></div> -->
+    
+   
+   
+    <h1 id="overall"></h1>
+    <div id="l1">
+        <h2 id="pho"></h2>
+        <h2>pho</h2>
+        <div id="pic1">
+          <select id="user1" class="choose">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+       <!-- <input type="integer" id="amount" placeholder="insert amount...">
+        <button onclick="purchase0()">purchase</button> -->
+    </div>
+
+    <div id="r1">
+       <h2 id="grilledpork"></h2>
+         <h2>grilled pork</h2>
+        <div id="pic2">
+          <select id="user2" class="choose">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+    </div>
+ 
+    <div id="l2">
+        <h2 id="crabsoup"></h2>
+        <h2>crab soup</h2>
+        <div id="pic3">
+          <select id="user3" class="choose">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+    </div>
+
+    <div id="r2">
+        <h2 id="springrolls"></h2>
+        <h2>spring rolls</h2>
+        <div id="pic4">
+          <select id="user4" class="choose">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+    </div>
+    
+<div id="l3">
+        <h2 id="banhmi"></h2>
+        <h2>banh mi</h2>
+        <div id="pic5">
+          <select id="user5" class="choose">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+    </div>
+    
+<div id="r3">
+       <h2 id="banhxeo"></h2>
+       <h2>banh xeo</h2>
+        <div id="pic6">
+          <select id="user6" class="choose">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+    </div>
+    <!--
+    <div id="displayAmount">
+      <h1 id="yourOrder">your purchase</h1>
+      <ul id="orderList"></ul>
+      <p id="totalDisplay"></p>
+      <p id="taxTotal"></p>
+      <button onlick="totalPurchase()">checkout</button>
+    </div> -->
+   <script>
+
+   
+/* var foodName = [];
+ var foodPrice = [];
+ var total = [];
+ 
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var mydata = JSON.parse(this.responseText);
+                console.log(mydata.food.length);
+                for (var i=0;i< mydata.food.length;i++) {
+                    foodName.push(mydata.food[i].name);
+                    foodPrice.push(mydata.food[i].price);
+                    console.log(foodName);
+                    console.log(foodPrice);
+                }
+                document.getElementById('name0').innerHTML = foodName[0];
+                document.getElementById('price0').innerHTML = foodPrice[0];
+                document.getElementById('sides0').innerHTML = mydata.food[0].sides;
+                
+            }
+        };
+        xmlhttp.open("GET", "vietRes.json", true);
+        xmlhttp.send();
+        
+        function purch0() {
+          var amount = document.getElementById('amount').value;
+          var subtotal = amount * foodPrices[0];
+          total.push(subtotal * 1.04712.toFixed(2));
+          document.getElementbyId(amount).value = "";
+          var node = document.createElement('li');
+          var textNode = document.createTextNode (amount + " x " + foodName[]);
+          node.appendChild(textNode);
+          document.getElementById('orderList').appendChild(node);
+          //local variable to reduce total arr
+          var sum = total.reduce(add, 0);
+          function add(a, b) {
+            return a + b;
+          }
+          document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+        }
+   
+   function totalItems() {
+     var a= document.getElementById('user').value;
+     localStorage.setItem('key1',a);
+     location.href= "vietRes2.html";
+     var previous= null;
+     var current= null;
+     setInternal(function() {
+       $.getJSON('vietRes.json',function(json) {
+         current=JSON.stringify(json);
+         if (previous && current && previous!==current) {
+           location.reload();
+         }
+         previous==current;
+       });
+     },2000);
+   }
+   
+   
+</script>
+</h2>
+</div>
+</body>
+
+</html>
