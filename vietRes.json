@@ -3,7 +3,7 @@
     {
       "name": "Pho",
       "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
-      "price": 7.00,
+      "price": 10.00,
       "ounces": 12
     },
     
@@ -17,14 +17,14 @@
     {
       "name": "Crab Soup",
      "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
-      "price": 8.50,
+      "price": 10.00,
       "ounces": 12
     },
     
     {
       "name": "Spring Rolls",
      "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
-      "price": 8.50,
+      "price": 5.00,
       "ounces": 12
     },
     

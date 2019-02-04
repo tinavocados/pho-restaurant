@@ -4,7 +4,7 @@
     margin-bottom: 25px;
   }
 
-  
+
   body {
   background-image: url("chalk.jpg");
   color: white;
@@ -16,6 +16,10 @@ h2 {
 }
 
 
+#label {
+  font-family: "Courier New", Courier;
+  color: white;
+}
 #title {
   font-family: "Courier New", Courier;
   color: white;
@@ -31,22 +35,23 @@ h2 {
 }
 
 
-#food0 {
+#pho0 {
   font-family: "Courier New", Courier, monospace;
   color: #020311;
-  background-image: url("https://fromthelarder.co.uk/wp-content/uploads/2017/11/smallsqBanh-Xeo-3.jpg");
+  background-image: url("https://flockler.com/thumbs/sites/192/pho_s600x600_c1266x739_l0x1047.jpg");
   width: 250px;
   height: 300px;
   margin-right: 30px;
-  
+  border-radius: 15px;
   float: left;
 }
 
 
 
-#food1 {
+#pork1 {
   font-family: "Courier New", Courier, monospace;
   width: 250px;
+  border-radius: 15px;
   height: 300px;
   margin-right: 30px;
   color: #020311;
@@ -56,9 +61,10 @@ h2 {
 
 
 
-#food2 {
+#crab2 {
   font-family: "Courier New", Courier, monospace;
   width: 250px;
+  border-radius: 15px;
   height: 300px;
   margin-right: 30px;
   color: #020311;
@@ -68,10 +74,11 @@ h2 {
 
 
 
-#food3 {
+#spring3 {
   font-family: "Courier New", Courier, monospace;
   width: 250px;
   height: 300px;
+  border-radius: 15px;
   margin-right: 30px;
   color: #020311;
  background-image: url("https://www.happyfoodstube.com/wp-content/uploads/2018/03/vegetarian-fresh-spring-rolls-image.jpg");
@@ -81,22 +88,24 @@ h2 {
 
 
 
-#food4 {
+#banhmi4 {
   font-family: "Courier New", Courier, monospace;
   background-size: auto 300px;
   width: 250px;
   height: 300px;
+  border-radius: 15px;
   color: #020311;
   margin-right: 30px;
   background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/11/ac/45/b1/vietnamese-banh-mi-roll.jpg");
   float: left;
 }
 
-#pho5 {
+#banhxeo5 {
   background-image: url("https://i.pinimg.com/originals/b7/89/97/b78997714fa00340da936448579e6ad0.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 250px;
+  border-radius: 15px;
   height: 300px;
   float: left;
 }

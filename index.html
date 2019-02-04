@@ -10,76 +10,67 @@
 <body>
     <br>
     <h1 id="title">Pho Na</h1>
-    <p id="address">1538 Vo Blvd #101, Honolulu, HI 96814</p>
+    <p id="address">"The real deal!" -Mr. Kam</p>
 
     <br>
     
     <div class="allboxes">
-
-        <div class="box" id="food0">
-            <h1 id="name0"></h1>
-            <p id="sides0"></p>
-            <p id="price0"></p>
-            <input type="integer" id="quantity" placeholder="Enter quantity...">
-            <button onclick="buy0()">Buy</button>
+        <div class="box" id="pho0">
+           <p id="label">pho - $10.00</p>
+            <p id="amount0"></p>
+            <input type="integer" id="quantity" placeholder="Enter amount">
+            <button onclick="purchase0()">purchase</button>
         </div>
     
 
-        <div class="box" id="food1">
-            <h1 id="name1"></h1>
-            <p id="sides"></p>
-            <p id="price1"></p>
-            <input type="integer" id="quantity1" placeholder="Enter quantity...">
-            <button onclick="buy1()">Buy</button>
+        <div class="box" id="pork1">
+           <p id="label">grilled pork - $7.00</p>
+            <p id="amount1"></p>
+            <input type="integer" id="quantity1" placeholder="Enter amount">
+            <button onclick="purchase1()">purchase</button>
         </div>
     </div>
 
     <div class="row">
-
-        <div class="box" id="food2">
-            <h1 id="name2"></h1>
-            <p id="sides2"></p>
-            <p id="price2"></p>
-            <input type="integer" id="quantity2" placeholder="Enter quantity...">
-            <button onclick="buy2()">Buy</button>
+        <div class="box" id="crab2">
+          <p id="label">crab soup - $10.00</p>
+            <p id="amount2"></p>
+            <input type="integer" id="quantity2" placeholder="Enter amount">
+            <button onclick="purchase2()">purchase</button>
         </div>
    
        
-        <div class="box" id="food3">
-            <h1 id="name3"></h1>
-            <p id="sides3"></p>
-            <p id="price3"></p>
-            <input type="integer" id="quantity3" placeholder="Enter quantity...">
-            <button onclick="buy3()">Buy</button>
+        <div class="box" id="spring3">
+         <p id="label">fresh spring rolls - $5.00</p>
+            <p id="amount3"></p>
+            <input type="integer" id="quantity3" placeholder="Enter amount">
+            <button onclick="purchase3()">purchase</button>
         </div>
     </div>
 
     <div class="row">
-       
-        <div class="box" id="food4">
-            <h1 id="name4"></h1>
-            <p id="sides4"></p>
-            <p id="price4"></p>
-            <input type="integer" id="quantity4" placeholder="Enter quantity...">
-            <button onclick="buy4()">Buy</button>
+        <div class="box" id="banhmi4">
+            <p id="label">banh mi - $7.50</p>
+            <p id="amount4"></p>
+            <input type="integer" id="quantity4" placeholder="Enter amount">
+            <button onclick="purchase4()">purchase</button>
         </div>
    
       
-        <div class="box" id="food5">
-            <h1 id="name5"></h1>
-            <p id="toppings5"></p>
-            <p id="price5"></p>
-            <input type="integer" id="quantity5" placeholder="Enter quantity...">
-            <button onclick="buy5()">Buy</button>
+        <div class="box" id="banhxeo5">
+          <p id="label">banh xeo - $7.50</p>
+            <p id="amount5"></p>
+            <input type="integer" id="quantity5" placeholder="Enter amount">
+            <button onclick="purchase5()">purchase</button>
         </div>
     </div>
 
     <div id="showPurchase">
-        <h1 id="yourOrder">Your Order</h1>
+        <h1 id="yourOrder">Total Purchase</h1>
         <ul id="orderList"></ul>
         <p id="totalDisplay"></p>
         <p id="taxTotal"></p>
-        <button onclick="totalItems()">Checkout</button>
+        <button onclick="totalItems()">checkout</button>
     </div>
 
 
@@ -89,7 +80,7 @@
         var total = [];
         var food0name;
         var food0price;
-        /*********Ramen 0**********/
+        
         var xmlhttp = new XMLHttpRequest(); //I want to begin a new file request from the server
         xmlhttp.onreadystatechange = function () { //Do this function to check if it is ready
             if (this.readyState == 4 && this.status == 200) { //If the server is ready(4) and the file is available(200)
@@ -97,44 +88,33 @@
                 for (var i = 0; i < mydata.food.length; i++) {
                     foodName.push(mydata.food[i].name);
                     foodPrices.push(mydata.food[i].price);
-                    console.log(foodName);
-                    console.log(foodPrices);
                 }
-                document.getElementById('name0').innerHTML = mydata.food[0].name;
+               
                
                 food0price = mydata.food[0].price;
-                document.getElementById('price0').innerHTML = "$" + mydata.food[0].price + ".00";
-                document.getElementById('sides0').innerHTML = mydata.food[0].toppings;
-                document.getElementById('name1').innerHTML = mydata.food[1].name;
-                
+                document.getElementById('amount0').innerHTML = "$" + mydata.food[0].price + ".00";
+               
                 food1price = mydata.food[1].price;
-                document.getElementById('price1').innerHTML = "$" + mydata.food[1].price + ".00";
-                document.getElementById('sides0').innerHTML = mydata.food[1].toppings;
-                document.getElementById('name2').innerHTML = mydata.food[2].name;
+                document.getElementById('amount1').innerHTML = "$" + mydata.food[1].price + ".00";
                
                 food2price = mydata.food[2].price;
-                document.getElementById('price2').innerHTML = "$" + mydata.food[2].price;
-                document.getElementById('sides1').innerHTML = mydata.food[2].toppings;
-                document.getElementById('name3').innerHTML = mydata.food[3].name;
+                document.getElementById('amount2').innerHTML = "$" + mydata.food[2].price;
+                
+                document.getElementById('amount3').innerHTML = "$" + mydata.food[3].price;
                
-                document.getElementById('price3').innerHTML = "$" + mydata.food[3].price;
-                document.getElementById('sides2').innerHTML = mydata.food[3].toppings;
-                document.getElementById('name4').innerHTML = mydata.food[4].name;
                 
                 food4price = mydata.food[4].price;
-                document.getElementById('price4').innerHTML = "$" + mydata.food[4].price;
-                document.getElementById('sides3').innerHTML = mydata.food[4].toppings;
-                document.getElementById('name5').innerHTML = mydata.food[5].name;
-               
+                document.getElementById('amount4').innerHTML = "$" + mydata.food[4].price;
+              
                 food5price = mydata.food[5].price;
-                document.getElementById('price5').innerHTML = "$" + mydata.food[5].price;
-                document.getElementById('sides4').innerHTML = mydata.food[5].toppings;
+                document.getElementById('amount5').innerHTML = "$" + mydata.food[5].price;
+               
             }
         };
-        xmlhttp.open("GET", "vietRes.json", true); //I will GET a file called menu.json
+        xmlhttp.open("GET", "vietRes.json", true); //I will GET a file called vietRes.json
         xmlhttp.send(); //Send to the browser
-        /*********Ramen 0**********/
-        function buy0() {
+       
+        function purchase0() {
             //Get the value of the quantity field//
             var qty = document.getElementById('quantity').value;
             var subtotal = qty * foodPrices[0];
@@ -151,10 +131,10 @@
                 return a + b;
             }
             //I output the SUM of everything in the total array and fix the decimal places to 2//
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+            document.getElementById('total').innerHTML = "Total: $" + sum.toFixed(2);
         }
-        /*********Ramen 1**********/
-        function buy1() {
+       
+        function purchase1() {
             var qty = document.getElementById('quantity1').value;
             var subtotal = qty * foodPrices[1];
             total.push(subtotal * 1.04712.toFixed(2));
@@ -167,10 +147,10 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+            document.getElementById('total').innerHTML = "Total: $" + sum.toFixed(2);
         }
-        /*********Ramen 2**********/
-        function buy2() {
+        
+        function purchase2() {
             var qty = document.getElementById('quantity2').value;
             var subtotal = qty * foodPrices[2];
             total.push(subtotal * 1.04712.toFixed(2));
@@ -183,10 +163,10 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+            document.getElementById('total').innerHTML = "Total: $" + sum.toFixed(2);
         }
-        /*********Ramen 3**********/
-        function buy3() {
+    
+        function purchase3() {
             var qty = document.getElementById('quantity3').value;
             var subtotal = qty * foodPrices[3];
             total.push(subtotal * 1.04712.toFixed(2));
@@ -199,10 +179,10 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+            document.getElementById('total').innerHTML = "Total: $" + sum.toFixed(2);
         }
-        /*********Ramen 4**********/
-        function buy4() {
+       
+        function purchase4() {
             var qty = document.getElementById('quantity4').value;
             var subtotal = qty * foodPrices[4];
             total.push(subtotal * 1.04712.toFixed(2));
@@ -215,10 +195,10 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+            document.getElementById('total').innerHTML = "Total: $" + sum.toFixed(2);
         }
-        /*********Ramen 5**********/
-        function buy5() {
+       
+        function purchase5() {
             var qty = document.getElementById('quantity5').value;
             var subtotal = qty * foodPrices[5];
             total.push(subtotal * 1.04712.toFixed(2));
@@ -231,7 +211,7 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+            document.getElementById('total').innerHTML = "Total: $" + sum.toFixed(2);
         }
    
         var order= [];
@@ -241,8 +221,6 @@
                 return a + b;
                 }
             var pleaseWork= order.push("orderList");
-            localStorage.setItem('key1', sum.toFixed(2));
-            localStorage.setItem('crab1', pleaseWork);
             location.href = "vietRes2.html";
         }
         
